@@ -13,7 +13,12 @@ import { useTranslation } from 'react-i18next';
 import i18n, { changeLanguage } from 'i18next';
 import { useRouter } from 'next/router';
 
-const SubMenu = ({ isVisible, transparent }) => {
+interface ISubMenu{
+  isVisible: boolean,
+  transparent: boolean
+}
+
+const SubMenu = ({ isVisible, transparent }: ISubMenu): React.ReactElement => {
   const [language, setLanguage] = useState(i18n.language);
   const router = useRouter();
   const { t } = useTranslation();
@@ -132,11 +137,6 @@ const SubMenu = ({ isVisible, transparent }) => {
       </li>
     </ul>
   );
-};
-
-SubMenu.propTypes = {
-  isVisible: PropTypes.bool.isRequired,
-  transparent: PropTypes.bool,
 };
 
 SubMenu.defaultProps = {

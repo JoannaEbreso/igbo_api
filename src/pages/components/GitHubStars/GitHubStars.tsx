@@ -3,7 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { GITHUB_REPO } from '../../../siteConstants';
 
-const GitHubStars = ({ stars }) => (
+interface IGitHubStars{
+    stars: number;
+}
+
+const GitHubStars = ({ stars }: IGitHubStars): React.ReactElement => (
   <div className="flex flex-row items-center justify-center space-x-4">
     <a
       href={GITHUB_REPO}
@@ -64,9 +68,5 @@ const GitHubStars = ({ stars }) => (
     </div>
   </div>
 );
-
-GitHubStars.propTypes = {
-  stars: PropTypes.number.isRequired,
-};
 
 export default GitHubStars;

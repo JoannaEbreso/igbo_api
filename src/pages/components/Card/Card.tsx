@@ -2,12 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip } from '@chakra-ui/react';
 
+interface ICard{
+    title: string,
+    description: string,
+    icon: string,
+    tooltipLabel: string;
+}
+
+
 const Card = ({
   title,
   description,
   icon,
   tooltipLabel,
-}) => (
+}: ICard): React.ReactElement => (
   <Tooltip label={tooltipLabel}>
     <div
       style={{
@@ -37,12 +45,5 @@ const Card = ({
     </div>
   </Tooltip>
 );
-
-Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  tooltipLabel: PropTypes.string.isRequired,
-};
 
 export default Card;

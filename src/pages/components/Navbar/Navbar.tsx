@@ -6,7 +6,13 @@ import { Link } from 'react-scroll';
 import SubMenu from './SubMenu';
 import MenuIcon from '../../assets/downchevron.svg';
 
-const Navbar = ({ to, transparent }) => {
+
+interface INavbar{
+  to: string,
+  transparent: boolean
+}
+
+const Navbar = ({ to, transparent }: INavbar): React.ReactElement => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const matchesLargeScreenQuery = useMediaQuery('(min-width:1024px)');
   return (
@@ -38,11 +44,6 @@ const Navbar = ({ to, transparent }) => {
       <SubMenu isVisible={matchesLargeScreenQuery || isMenuVisible} transparent={transparent} />
     </div>
   );
-};
-
-Navbar.propTypes = {
-  to: PropTypes.string,
-  transparent: PropTypes.bool,
 };
 
 Navbar.defaultProps = {

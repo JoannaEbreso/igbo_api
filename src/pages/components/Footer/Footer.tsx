@@ -68,17 +68,17 @@ const Footer = () => {
                 <h3 className="font-bold">Organization</h3>
                 <ul className="list-none space-y-3">
                   <li>
-                    <a href="/about" className="font-normal border-b border-b-gray-500">
+                    <a href="/about.tsx" className="font-normal border-b border-b-gray-500">
                       About
                     </a>
                   </li>
                   <li>
-                    <a href="/terms" className="font-normal border-b border-b-gray-500">
+                    <a href="/terms.tsx" className="font-normal border-b border-b-gray-500">
                       Terms of Service
                     </a>
                   </li>
                   <li>
-                    <a href="/privacy" className="font-normal border-b border-b-gray-500">
+                    <a href="/privacy.tsx" className="font-normal border-b border-b-gray-500">
                       Privacy
                     </a>
                   </li>
